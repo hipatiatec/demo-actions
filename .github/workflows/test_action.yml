@@ -7,7 +7,7 @@ jobs:
    name: Greet the user in Python
    steps:
     - name: Checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
     - name: Fetch result
       id: get_value
       uses: ./.github/actions/
