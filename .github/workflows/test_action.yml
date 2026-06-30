@@ -1,0 +1,17 @@
+name: Test actions
+on: [push]
+
+jobs:
+  get-result:
+   runs-on: ubuntu-latest
+   name: Greet the user in Python
+   steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Fetch result
+      id: get_value
+      uses: ./.github/actions/
+      with:
+       valor: "Alice"
+    - name: Print result
+      run: echo "${{ steps.get_value.outputs.result }}"   
