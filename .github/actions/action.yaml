@@ -15,7 +15,7 @@ runs:
     - name: Install Python
       uses: actions/checkout@v6
       with:
-        python-version: '3.13'
+        python-version: "3.13"
     - name: Pass Inputs to Shell
       run: |
         echo "INPUT_VAL=${{inputs.valor}}" >>$GITHUB_ENV
