@@ -13,12 +13,9 @@ runs:
   using: composite
   steps:
     - name: Install Python
-      uses: actions/setup-python@v5
+      uses: actions/checkout@v6
       with:
-        python-version: "3.10"
-    # - name: Install dependencies
-    #  run: pip install -r requirements.txt
-    #  shell: bash
+        python-version: '3.13'
     - name: Pass Inputs to Shell
       run: |
         echo "INPUT_VAL=${{inputs.valor}}" >>$GITHUB_ENV
